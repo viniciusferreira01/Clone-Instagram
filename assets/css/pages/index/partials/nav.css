@@ -1,0 +1,173 @@
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--cor-branco);
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-height: 100vh;
+  width: 70px;
+  padding: 30px 0;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  z-index: 5;
+}
+/* Logo */
+nav .logo img {
+  width: 100%;
+  max-width: 30px;
+}
+/* Opções */
+nav .opcoes {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 80px 0;
+}
+nav .opcoes button {
+  position: relative;
+  background-color: var(--cor-branco);
+  border-radius: 50%;
+  padding: 8px;
+  cursor: pointer;
+  margin: 0 0 10px 0;
+  transition: all 0.3s;
+}
+nav .opcoes button.perfil {
+  padding: 0;
+  margin: 15px 0 0 0;
+}
+nav .opcoes button.perfil:hover {
+  background-color: var(--cor-branco);
+}
+nav .opcoes button:hover {
+  background-color: var(--cor-cinza-claro);
+}
+nav .opcoes button:hover img {
+  transform: scale(1.05);
+}
+nav .opcoes button.perfil img {
+  border-radius: 50%;
+}
+nav .opcoes button img {
+  width: 100%;
+  max-width: 25px;
+  transition: all 0.3s;
+}
+nav .opcoes button .nome {
+  background-color: var(--cor-cinza-claro);
+  padding: 10px;
+  border-radius: 5px;
+  position: absolute;
+  left: 50px;
+  top: 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.5);
+  pointer-events: none;
+  width: max-content;
+  transition: all 0.3s;
+}
+nav .opcoes button .nome p {
+  font-family: var(--fonte);
+  font-size: 0.8rem;
+  color: var(--cor-preto);
+}
+nav .opcoes button:hover .nome {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+/* Menu */
+nav .menu button {
+  position: relative;
+  background-color: var(--cor-branco);
+  border-radius: 50%;
+  padding: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+nav .menu button:hover {
+  background-color: var(--cor-cinza-claro);
+}
+nav .menu button:hover img {
+  transform: scale(1.05);
+}
+nav .menu button img {
+  width: 100%;
+  max-width: 25px;
+  transition: all 0.3s;
+}
+nav .menu button .nome {
+  background-color: var(--cor-cinza-claro);
+  padding: 10px;
+  border-radius: 5px;
+  position: absolute;
+  left: 50px;
+  top: 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.5);
+  pointer-events: none;
+  width: max-content;
+  transition: all 0.3s;
+}
+nav .menu button .nome p {
+  font-family: var(--fonte);
+  font-size: 0.8rem;
+  color: var(--cor-preto);
+}
+nav .menu button:hover .nome {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+/* Responsivo */
+@media screen and (max-width: 900px) {
+  nav {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    min-height: 50px;
+    width: 100%;
+    padding: 0 20px;
+    top: auto;
+    bottom: 0;
+    border-right: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  /* Logo */
+  nav .logo {
+    display: none;
+  }
+  /* Opções */
+  nav .opcoes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0;
+  }
+  nav .opcoes button.mobile {
+    display: none;
+  }
+  nav .opcoes button {
+    padding: 0;
+    margin: 0;
+  }
+  nav .opcoes button.perfil {
+    margin: 0;
+  }
+  nav .opcoes button img {
+    width: 100%;
+    max-width: 25px;
+    transition: all 0.3s;
+  }
+  nav .opcoes button .nome {
+    display: none;
+  }
+  /* Menu */
+  nav .menu {
+    display: none;
+  }
+}

@@ -1,0 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  appearance: none;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+  line-height: 1;
+}
+body,html {
+  background-color: var(--cor-fundo-claro);
+}
